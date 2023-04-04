@@ -19,4 +19,5 @@ public class Dealer {
     public void shuffleDeck(Deck cards){
         Collections.shuffle(cards.getDeckPack());
     }
+
 }

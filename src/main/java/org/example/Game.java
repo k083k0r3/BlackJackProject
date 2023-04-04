@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class Game {
@@ -8,6 +9,8 @@ public class Game {
     private final Deck deck;
     private final Dealer dealer;
     private final int numOfCardsPerPlayer = 2;
+
+    //private int numOfPlayers;
 
     public Game(){
         deck = new Deck();
@@ -47,5 +50,8 @@ public class Game {
     public void startGame(){
         getDealer().shuffleDeck(deck);
         getDealer().dishOut(getDeck(), getPlayers(), getNumOfCardsPerPlayer());
+        for (Player player : getPlayers()){
+            player.calcHandValue();
+        }
     }
 }

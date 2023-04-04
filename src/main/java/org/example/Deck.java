@@ -1,4 +1,5 @@
 package org.example;
+
 import java.util.ArrayList;
 
 public class Deck {
@@ -13,7 +14,6 @@ public class Deck {
         }
     }
 
-
     public ArrayList<Card> getDeckPack(){
         return deckPack;
     }
@@ -24,3 +24,6 @@ public class Deck {
 
 
 }
+
+
+// Deck newPack = new Deck

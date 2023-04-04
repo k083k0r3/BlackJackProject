@@ -19,9 +19,12 @@ public class Card {
 
     @Override
     public String toString(){
-        return "Card [" + getRank() + " of " +
-                getSuit() + "] \n";
+        return "[" + getRank() + " of " +
+                getSuit() + "]";
     }
 
 
 }
+
+
+// Card playingCard = new Card(TWO, SPADES);
