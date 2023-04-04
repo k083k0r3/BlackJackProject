@@ -17,12 +17,12 @@ public class Player {
     }
 
     public int calcHandValue(){
-        System.out.println("\n" + name + "'s Cards:");
+        System.out.println("Cards:");
         for (Card card : hand){
             System.out.println(card + "=" + card.getRank().value + " ");
             handValue += card.getRank().value;
         }
-        System.out.println(name + "'s total " + handValue);
+        System.out.println("total " + handValue);
         return handValue;
     }
 

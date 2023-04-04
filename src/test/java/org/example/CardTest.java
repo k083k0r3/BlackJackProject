@@ -17,7 +17,7 @@ class CardTest {
     @Test
     void getCardSuit(){
         Card newCard = new Card(Rank.KING, Suit.HEARTS);
-        assertFalse(newCard.getSuit() == Suit.DIAMONDS);
+        assertNotSame(newCard.getSuit(), Suit.DIAMONDS);
     }
 
 }
