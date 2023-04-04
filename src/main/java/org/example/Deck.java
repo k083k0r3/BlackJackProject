@@ -1,13 +1,12 @@
 package org.example;
-
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-    private ArrayList<Card> deck;
+    private ArrayList<Card> deckPack;
 
     public Deck(){
-        deck = new ArrayList<>();
+        deckPack = new ArrayList<>();
         for (Suit suit : Suit.values()){
             for (Rank rank : Rank.values()){
                 addCard(new Card(rank, suit));
@@ -21,11 +20,11 @@ public class Deck {
     }
 
     public ArrayList<Card> getDeckPack(){
-        return deck;
+        return deckPack;
     }
 
     public void addCard(Card card){
-        deck.add(card);
+        getDeckPack().add(card);
     }
 
 
