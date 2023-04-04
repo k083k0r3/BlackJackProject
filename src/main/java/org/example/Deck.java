@@ -1,9 +1,8 @@
 package org.example;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Deck {
-    private ArrayList<Card> deckPack;
+    private final ArrayList<Card> deckPack;
 
     public Deck(){
         deckPack = new ArrayList<>();
@@ -12,12 +11,8 @@ public class Deck {
                 addCard(new Card(rank, suit));
             }
         }
-        shuffleCards();
     }
 
-    public void shuffleCards(){
-        Collections.shuffle(getDeckPack());
-    }
 
     public ArrayList<Card> getDeckPack(){
         return deckPack;

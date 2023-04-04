@@ -5,9 +5,7 @@ import java.util.Collections;
 
 public class Dealer {
 
-    public Dealer(){
-
-    }
+    public Dealer(){}
 
     public void dishOut(Deck cards, ArrayList<Player> players, int howManyCardsPerPlayer){
         for (Player player : players) {

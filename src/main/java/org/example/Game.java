@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 
 public class Game {
-
     private ArrayList<Player> players;
     private final Deck deck;
+    private final Dealer dealer;
+    private final int numOfCardsPerPlayer = 2;
 
     public Game(){
         deck = new Deck();
+        dealer = new Dealer();
         players = new ArrayList<>();
         while(players.size() == 0){
             Player player1 = new Player();
@@ -21,20 +23,8 @@ public class Game {
         }
     }
 
-    public void giveOutCards(){
-        dishOut();
-        dishOut();
-    }
-
     public ArrayList<Player> getPlayers() {
         return players;
-    }
-
-    public void dishOut(){
-        
-        for (int i = 0; i < players.size(); i++){
-            getPlayers().get(i).setHand(getDeck().getDeckPack().remove(0));
-        }
     }
 
     public void addPlayer(Player player){
@@ -44,5 +34,18 @@ public class Game {
 
     public Deck getDeck() {
         return deck;
+    }
+
+    public Dealer getDealer() {
+        return dealer;
+    }
+
+    public int getNumOfCardsPerPlayer() {
+        return numOfCardsPerPlayer;
+    }
+
+    public void startGame(){
+        getDealer().shuffleDeck(deck);
+        getDealer().dishOut(getDeck(), getPlayers(), getNumOfCardsPerPlayer());
     }
 }
